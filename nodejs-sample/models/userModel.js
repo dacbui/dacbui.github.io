@@ -24,8 +24,8 @@ User.getAllUsers = function (result) {
     });
 };
 
-User.getUserById = function(id, result){
-    sql.query("SELECT * FROM Users WHERE id = ?", id, function(err, res){
+User.getUserById = function (id, result) {
+    sql.query("SELECT * FROM Users WHERE id = ?", id, function (err, res) {
         if (err) {
             console.log('error: ', err);
             result(null, err)
@@ -36,8 +36,8 @@ User.getUserById = function(id, result){
     });
 };
 
-User.createUser = function(newUser, result){
-    sql.query("INSERT INTO Users SET ?", newUser, function(err, res){
+User.createUser = function (newUser, result) {
+    sql.query("INSERT INTO Users SET ?", newUser, function (err, res) {
         if (err) {
             console.log('error: ', err);
             result(null, err)
@@ -48,8 +48,8 @@ User.createUser = function(newUser, result){
     });
 };
 
-User.updateUser = function(id, user, result){
-    sql.query("UPDATE Users SET ? WHERE id = ?", [user.user, id], function(err, res){
+User.updateUser = function (id, user, result) {
+    sql.query("UPDATE Users SET ? WHERE id = ?", [user.user, id], function (err, res) {
         if (err) {
             console.log('error: ', err);
             result(null, err)
@@ -60,8 +60,8 @@ User.updateUser = function(id, user, result){
     });
 };
 
-User.deleteUser = function(id, result){
-    sql.query("DELETE FROM Users WHERE id = ?", id, function(err, res){
+User.deleteUser = function (id, result) {
+    sql.query("DELETE FROM Users WHERE id = ?", id, function (err, res) {
         if (err) {
             console.log('error: ', err);
             result(null, err)
